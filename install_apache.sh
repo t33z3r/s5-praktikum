@@ -1,7 +1,6 @@
 #!/bin/bash
 if [[ $(id -u) -ne 0 ]] ; then echo .Please run as root. ; exit 1; fi
 sudo yum -y update
-sudo yum -y upgrade
 sudo yum -y install openssl mod_ssl
 sudo yum -y install httpd
 sudo systemctl enable httpd
