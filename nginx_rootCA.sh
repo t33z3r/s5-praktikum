@@ -14,7 +14,3 @@ scp /etc/pki/tls/nginx-selfsigned.csr ~/nginx-selfsigned.csr
 cd ~/
 openssl x509 -req -in nginx-selfsigned.csr -CA /etc/pki/CA/certs/rootCA.crt -CAkey /etc/pki/CA/private/rootCA.key -CAcreateserial -out nginx-selfsigned.crt -days 365
 scp ~/nginx-selfsigned.crt /etc/pki/tls/certs/nginx-selfsigned.crt
-rm -r /etc/ssl/certs/nginx-selfsigned.crt
-mv /etc/pki/tls/certs/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
-rm -r /etc/ssl/private/nginx-selfsigned.key
-mv /etc/pki/tls/private/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
