@@ -1,6 +1,7 @@
 #!/bin/bash
 if [[ $(id -u) -ne 0 ]] ; then echo .Please run as root. ; exit 1; fi
 sudo yum install -y openssl
+mkdir /etc/pki/CA
 mkdir /etc/pki/CA/private
 mkdir /etc/pki/CA/certs
 cd /etc/pki/CA/private
